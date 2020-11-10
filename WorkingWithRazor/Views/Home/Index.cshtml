@@ -5,9 +5,24 @@
 
 
 <h2>Index</h2>
+
+@section Header {
+    <div class="view">
+        <div>This is section Header in index</div>
+        @foreach(string str in new[] { "Home","List","Edit"})
+        {
+            @Html.ActionLink(str, str, null, new { style = "margin: 5px;"})
+        }
+    </div>
+    
+    }
 <div>This is a list of fruit names:</div>
 
 @foreach(string name in Model)
 {
 <span><b>@name</b></span>
 }
+
+@*@section Footer {
+    <div class="view">This is footer in Index</div>
+    }*@
