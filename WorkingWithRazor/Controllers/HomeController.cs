@@ -17,7 +17,10 @@ namespace WorkingWithRazor.Controllers
 
         public ActionResult List()
         {
-            return View();
+            string[] fruit = { "Apple", "Orange", "Pomelo" };
+            return View(fruit);
+
+            //return View();
         }
     }
 }
