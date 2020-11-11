@@ -22,5 +22,13 @@ namespace WorkingWithRazor.Controllers
 
             //return View();
         }
+
+
+        //optional attribute to avoid invoking by the user
+        [ChildActionOnly]
+        public ActionResult Time()
+        {  
+            return PartialView(DateTime.Now);
+        }
     }
 }
